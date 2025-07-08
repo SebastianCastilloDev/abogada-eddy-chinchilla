@@ -8,7 +8,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "default", size = "default", asChild = false, ...props }, ref) => {
-    const Comp = asChild ? React.Fragment : "button";
     const baseStyles = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
     
     const variantStyles = {
@@ -30,9 +29,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className || ""}`;
     
     return (
-      <Comp
+      <button
         className={classes}
-        ref={asChild ? undefined : ref}
+        ref={ref}
         {...props}
       />
     );
