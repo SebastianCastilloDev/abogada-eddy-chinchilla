@@ -1,8 +1,9 @@
+"use client";
+
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Instagram } from "lucide-react";
-import { motion } from "framer-motion";
 
 /**
  * Data ----------------------------------------------------------------------
@@ -99,13 +100,12 @@ const Header = () => (
           <p className="text-sm uppercase tracking-wider">{LAWYER.title}</p>
         </div>
       </div>
-      <Button
-        asChild
-        size="lg"
-        className="bg-black hover:bg-gray-900 text-yellow-400"
+      <a 
+        href="#contacto"
+        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-11 px-8 bg-black hover:bg-gray-900 text-yellow-400"
       >
-        <a href="#contacto">Agenda tu Consulta</a>
-      </Button>
+        Agenda tu Consulta
+      </a>
     </div>
   </header>
 );
@@ -121,30 +121,23 @@ const Hero = () => (
     />
     {/* Overlay */}
     <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+      <h2
         className="text-3xl md:text-5xl font-extrabold mb-4"
       >
         {LAWYER.tagline}
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+      </h2>
+      <p
         className="max-w-2xl text-lg md:text-xl"
       >
         Defensa, representación y asesoría jurídica con más de 10 años de
         experiencia.
-      </motion.p>
-      <Button
-        size="lg"
-        asChild
-        className="mt-8 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold"
+      </p>
+      <a 
+        href="#servicios"
+        className="mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium h-11 px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold"
       >
-        <a href="#servicios">Conoce Nuestros Servicios</a>
-      </Button>
+        Conoce Nuestros Servicios
+      </a>
     </div>
   </section>
 );
@@ -156,10 +149,8 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ icon, title, services }: ServiceCardProps) => (
-  <motion.div
-    whileHover={{ translateY: -4 }}
-    whileTap={{ scale: 0.98 }}
-    className="flex flex-col h-full"
+  <div
+    className="flex flex-col h-full hover:-translate-y-1 transition-transform duration-200"
   >
     <Card className="flex-1 rounded-2xl shadow-lg">
       <CardContent className="p-6 flex flex-col gap-4">
@@ -172,21 +163,17 @@ const ServiceCard = ({ icon, title, services }: ServiceCardProps) => (
         </ul>
       </CardContent>
     </Card>
-  </motion.div>
+  </div>
 );
 
 const ServicesSection = () => (
   <section id="servicios" className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+      <h2
         className="text-3xl md:text-4xl font-extrabold text-center mb-12"
       >
         Áreas de Práctica
-      </motion.h2>
+      </h2>
       <div
         className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
       >
