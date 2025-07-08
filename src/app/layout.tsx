@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abogadaeddychinchilla.com"),
   title: "Abogada Eddy Chinchilla | Soluciones legales a tu alcance",
   description: "Servicios legales profesionales en materia civil, mercantil, familia y penal. Más de 10 años de experiencia en asesoría jurídica en Venezuela.",
   keywords: "abogada, asesoría legal, servicios jurídicos, derecho civil, derecho penal, derecho mercantil, familia, LOPNNA, Venezuela",
