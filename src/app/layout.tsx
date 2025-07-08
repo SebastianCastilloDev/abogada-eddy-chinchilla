@@ -11,6 +11,17 @@ export const metadata: Metadata = {
   authors: [{ name: "Eddy Chinchilla" }],
   creator: "Eddy Chinchilla",
   publisher: "Eddy Chinchilla",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" }
+    ],
+    apple: [
+      { url: "/favicon.png" }
+    ],
+    shortcut: [
+      { url: "/favicon.png" }
+    ]
+  },
   openGraph: {
     title: "Abogada Eddy Chinchilla | Soluciones legales a tu alcance",
     description: "Servicios legales profesionales en materia civil, mercantil, familia y penal. Más de 10 años de experiencia en asesoría jurídica.",
@@ -55,6 +66,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
