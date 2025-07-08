@@ -12,10 +12,20 @@ interface ContactChipProps {
 const ContactChip = ({ icon, children, href }: ContactChipProps) => (
   <a
     href={href}
-    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-yellow-500 text-black font-semibold shadow hover:shadow-lg hover:bg-yellow-600 transition-colors"
+    className="group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 hover:border-amber-400/50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/10"
   >
-    {icon}
-    <span>{children}</span>
+    <div className="flex flex-col items-center text-center space-y-3">
+      <div className="p-3 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-black shadow-lg group-hover:shadow-amber-400/25 transition-all duration-300">
+        {icon}
+      </div>
+      <span className="text-white font-medium text-sm leading-relaxed group-hover:text-amber-300 transition-colors duration-300">
+        {children}
+      </span>
+    </div>
+    {/* Sutil efecto de brillo en hover */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+    </div>
   </a>
 );
 
