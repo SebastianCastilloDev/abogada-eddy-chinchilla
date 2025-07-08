@@ -18,7 +18,13 @@ const LAWYER = {
   instagram: "tu.abogadaeddy",
 };
 
-const SERVICE_CATEGORIES = [
+interface ServiceCategory {
+  icon: string;
+  title: string;
+  services: string[];
+}
+
+const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     icon: "👪",
     title: "Lopnna (Familia)",
@@ -143,7 +149,13 @@ const Hero = () => (
   </section>
 );
 
-const ServiceCard = ({ icon, title, services }) => (
+interface ServiceCardProps {
+  icon: string;
+  title: string;
+  services: string[];
+}
+
+const ServiceCard = ({ icon, title, services }: ServiceCardProps) => (
   <motion.div
     whileHover={{ translateY: -4 }}
     whileTap={{ scale: 0.98 }}
@@ -154,7 +166,7 @@ const ServiceCard = ({ icon, title, services }) => (
         <div className="text-5xl">{icon}</div>
         <h3 className="text-xl font-bold text-yellow-700">{title}</h3>
         <ul className="list-disc list-inside space-y-1 text-sm">
-          {services.map((s) => (
+          {services.map((s: string) => (
             <li key={s}>{s}</li>
           ))}
         </ul>
@@ -221,7 +233,13 @@ const ContactSection = () => (
   </section>
 );
 
-const ContactChip = ({ icon, children, href }) => (
+interface ContactChipProps {
+  icon: React.ReactNode;
+  children: React.ReactNode;
+  href: string;
+}
+
+const ContactChip = ({ icon, children, href }: ContactChipProps) => (
   <a
     href={href}
     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-yellow-500 text-black font-semibold shadow hover:shadow-lg hover:bg-yellow-600 transition-colors"
