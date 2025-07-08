@@ -1,0 +1,8 @@
+---
+description: Base rules for the project
+globs:
+  - "**/*.{js,jsx,ts,tsx,json,css,scss,md}"
+alwaysApply: true
+---
+
+- Implementa Solid y Clean Code.
