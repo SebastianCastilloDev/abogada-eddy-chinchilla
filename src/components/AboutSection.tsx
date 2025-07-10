@@ -110,8 +110,8 @@ const AboutSection = () => (
               <div className="text-center">
                 <div className="text-4xl mb-4 text-amber-600">💼</div>
                 <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-                  "Mi compromiso es brindar un servicio legal de excelencia, 
-                  basado en la confianza, la profesionalidad y el conocimiento profundo del derecho."
+                  &quot;Mi compromiso es brindar un servicio legal de excelencia, 
+                  basado en la confianza, la profesionalidad y el conocimiento profundo del derecho.&quot;
                 </blockquote>
                 <div className="mt-4 text-amber-700 font-semibold">
                   - {LAWYER.name}
