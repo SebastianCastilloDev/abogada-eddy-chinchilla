@@ -3,6 +3,7 @@
 import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
+import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <AboutSection />
         <ServicesSection />
         <ContactSection />
       </main>

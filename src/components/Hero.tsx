@@ -2,7 +2,7 @@ import React from "react";
 import { LAWYER } from "./lawyerData";
 
 const Hero = () => (
-  <section className="relative">
+  <section id="inicio" className="relative">
     {/* Hero Image */}
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <img
